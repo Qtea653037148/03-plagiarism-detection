@@ -54,6 +54,16 @@ class Config:
     web_search_timeout: int = 10               # 秒
     web_search_top_k_sentences: int = 3        # 只对 top-K 相似句做网络检索
 
+    # 网络搜索相似度阈值（比本地低，因为搜索引擎返回的是摘要）
+    web_threshold_high: float = 0.60           # 强相关
+    web_threshold_medium: float = 0.45         # 弱相关
+    web_threshold_low: float = 0.30            # 只是主题相关
+
+    # 网络搜索相似度阈值（比本地低，因为搜索引擎返回的是摘要）
+    web_threshold_high: float = 0.60           # 强相关
+    web_threshold_medium: float = 0.45         # 弱相关
+    web_threshold_low: float = 0.30            # 只是主题相关
+
     # ==================== 设备 ====================
     device: str = "cuda"
     seed: int = 42
